@@ -23,6 +23,7 @@ def kmeans(imset, k, maxiter=20):
     
     
     for i in range(maxiter):
+        print("iter "+str(i))
         center = []
         # with stableregion and membership, update center
         for j in range(k):
@@ -55,6 +56,5 @@ def kmeans(imset, k, maxiter=20):
             stableregion[j] = variance<median
     
     return stableregion, membership
-            
-            
-            
+             
+region, grouping = kmeans(imset,10)
