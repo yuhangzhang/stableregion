@@ -6,7 +6,7 @@ from PIL import Image
 imset = []
 
 for filename in os.listdir('/home/user/DATASETS/TRAIN_repository/VIC'):
-    im = Image.open('/home/user/DATASETS/TRAIN_repository/VIC/'+filename).crop(0,0,1600,1000)
+    im = Image.open('/home/user/DATASETS/TRAIN_repository/VIC/'+filename).crop([0,0,1600,1000])
     imset.append(np.array(im))
 
     
