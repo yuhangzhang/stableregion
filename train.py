@@ -24,4 +24,4 @@ def kmeans(imset, k):
 
 m = kmeans(imset, 5)
 
-print(len(m))
+print(len(m[0]))
