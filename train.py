@@ -6,7 +6,7 @@ imset = []
 
 for filename in os.listdir('/home/user/DATASETS/TRAIN_repository/VIC'):
     imset.append(Image.open('/home/user/DATASETS/TRAIN_repository/VIC/'+filename))
-    print('/home/user/DATASETS/TRAIN_repository/VIC/'+filename)
+
     
 def kmeans(imset, k):
     # initiate stable region
@@ -20,3 +20,8 @@ def kmeans(imset, k):
         membership.append([im for idx, im in enumerate(imset) if idx%k==i])
     
     return membership
+
+
+m = kmeans(imset, 5)
+
+print(len(m))
