@@ -3,10 +3,12 @@ import sys
 import numpy as np
 from PIL import Image
 
+imdirectory = 'C:\Users\Yuhang\Desktop\scantek\'
+
 imset = []
 
-for filename in os.listdir('/home/user/DATASETS/TRAIN_repository/VIC'):
-    im = Image.open('/home/user/DATASETS/TRAIN_repository/VIC/'+filename).crop([0,0,1600,1000])
+for filename in os.listdir(imdirectory):
+    im = Image.open(imdirectory+filename).resize([280, 180])
     imset.append(np.array(im))
 
     
